@@ -1,0 +1,21 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+<body style="background-image: linear-gradient(57deg, #FFFFFF, #87CEEB);">
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">The ID or Password you entered does not match with the database.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Detail information</h3>
+<p>
+    Either you're User ID or Passsword are incorrect or you are not registered in the system database.'
+</p> 
+</body>
